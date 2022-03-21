@@ -12,7 +12,7 @@ const Results = ({
       <h2>Amount: {amount}</h2>
       <h2>Converted Amount: {convertedAmount}</h2>
       {/* <h1>Countries: {countries}</h1> */}
-      <h5>{convertedAmount ? message : null}</h5>
+      <h3>{convertedAmount ? message : null}</h3>
     </div>
   );
 };
