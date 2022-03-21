@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "../App.css";
-import CurrencyRow from "./CurrencyRow";
+// import CurrencyRow from "./CurrencyRow";
 // import dotenv from "dotenv";
 // dotenv.config();
 
@@ -17,20 +17,20 @@ const Inputs = ({ calculate }) => {
   //   const [toCurrency, setToCurrency] = useState();
   const [exchangeRate, setExchangeRate] = useState();
   //   const [amount, setAmount] = useState(1);
-  const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
+  // const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
 
   const [fromCurrency, setFromCurrency] = useState("");
   const [toCurrency, setToCurrency] = useState("");
   const [amount, setAmount] = useState(0);
 
-  let toAmount, fromAmount;
-  if (amountInFromCurrency) {
-    fromAmount = amount;
-    toAmount = amount * exchangeRate;
-  } else {
-    toAmount = amount;
-    fromAmount = amount / exchangeRate;
-  }
+  // let toAmount, fromAmount;
+  // if (amountInFromCurrency) {
+  //   fromAmount = amount;
+  //   toAmount = amount * exchangeRate;
+  // } else {
+  //   // toAmount = amount;
+  //   // fromAmount = amount / exchangeRate;
+  // }
 
   useEffect(() => {
     fetch(BASE_URL)
