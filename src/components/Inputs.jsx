@@ -15,7 +15,7 @@ const Inputs = ({ calculate }) => {
   const [currencyOptions, setCurrencyOptions] = useState([]);
   //   const [fromCurrency, setFromCurrency] = useState();
   //   const [toCurrency, setToCurrency] = useState();
-  const [exchangeRate, setExchangeRate] = useState();
+  //const [exchangeRate, setExchangeRate] = useState();
   //   const [amount, setAmount] = useState(1);
   // const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
 
@@ -40,7 +40,7 @@ const Inputs = ({ calculate }) => {
         setCurrencyOptions([data.base, ...Object.keys(data.rates)]);
         setFromCurrency(data.base);
         setToCurrency(firstCurrency);
-        setExchangeRate(data.rates[firstCurrency]);
+        // setExchangeRate(data.rates[firstCurrency]);
       });
   }, []);
 
@@ -48,7 +48,7 @@ const Inputs = ({ calculate }) => {
     if (fromCurrency != null && toCurrency != null) {
       fetch(`${BASE_URL}?base=${fromCurrency}&symbols=${toCurrency}`)
         .then((res) => res.json())
-        .then((data) => setExchangeRate(data.rates[toCurrency]));
+        // .then((data) => setExchangeRate(data.rates[toCurrency]));
     }
   }, [fromCurrency, toCurrency]);
 
