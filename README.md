@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[Live App](https://girishgodage.in/currency_converter/)
+[Live App](http://girishgodage.in/currency_converter/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
